@@ -2,9 +2,9 @@
 STEPS="8"
 echo "1/$STEPS List apt's upgradable packages"
 echo
-echo -n "Uninstalled security updates: "
+echo -n "Pending security updates: "
 apt-get -s upgrade | grep "^Inst" | grep -i "security" | wc -l
-echo -n "Uninstalled updates in total: "
+echo -n "Pending updates in total: "
 apt-get -s upgrade | grep "^Inst" | wc -l
 echo
 echo "Press any key to continue..."
