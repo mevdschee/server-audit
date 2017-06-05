@@ -6,6 +6,4 @@ if [ -e "/etc/ssh/sshd_config" ]; then
   | diff -b - <(printf "ChallengeResponseAuthentication no\nPasswordAuthentication no\nPermitRootLogin no\n") \
   | grep "^<\|^>" \
   | sort -d
-else
-  echo "File '/etc/ssh/sshd_config' does not exist"
 fi
